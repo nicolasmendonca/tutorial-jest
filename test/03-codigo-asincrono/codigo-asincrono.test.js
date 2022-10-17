@@ -1,43 +1,43 @@
-import { crearSuperUsuarioAsync } from "src/crearSuperUsuarioAsync";
+import { crearSuperUsuarioAsync } from '../../src/crearSuperUsuarioAsync';
 
-describe("Promise.then", () => {
-  test("crear super usuario devuelve a mendo", () => {
+describe('Promise.then', () => {
+  test('crear super usuario devuelve a mendo', () => {
     return crearSuperUsuarioAsync().then((superUsuario) => {
       expect(superUsuario).toStrictEqual({
         id: 1,
-        nombre: "Mendo"
+        nombre: 'Mendo',
       });
     });
   });
 });
 
-describe("async/await", () => {
-  test("crear super usuario devuelve a mendo", async () => {
+describe('async/await', () => {
+  test('crear super usuario devuelve a mendo', async () => {
     const superUsuario = await crearSuperUsuarioAsync();
     expect(superUsuario).toStrictEqual({
       id: 1,
-      nombre: "Mendo"
+      nombre: 'Mendo',
     });
   });
 });
 
-describe("done", () => {
-  test("crear super usuario devuelve a mendo", (done) => {
+describe('done', () => {
+  test('crear super usuario devuelve a mendo', (done) => {
     crearSuperUsuarioAsync().then((superUsuario) => {
       expect(superUsuario).toStrictEqual({
         id: 1,
-        nombre: "Mendo"
+        nombre: 'Mendo',
       });
       done();
     });
   });
 });
 
-describe(".resolves. / .rejects.", () => {
-  test("crear super usuario devuelve a mendo", () => {
+describe('.resolves. / .rejects.', () => {
+  test('crear super usuario devuelve a mendo', () => {
     return expect(crearSuperUsuarioAsync()).resolves.toStrictEqual({
       id: 1,
-      nombre: "Mendo"
+      nombre: 'Mendo',
     });
   });
 });

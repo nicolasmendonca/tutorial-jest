@@ -1,7 +1,7 @@
-import { suma } from "src/suma";
-import { crearSuperUsuario } from "src/crearSuperUsuario";
+import { suma } from '../../src/suma';
+import { crearSuperUsuario } from '../../src/crearSuperUsuario';
 
-test("suma devuelve el resultado de una suma de dos valores", () => {
+test('suma devuelve el resultado de una suma de dos valores', () => {
   // Arrange
   const sumando1 = 1;
   const sumando2 = 2;
@@ -14,9 +14,9 @@ test("suma devuelve el resultado de una suma de dos valores", () => {
   expect(resultadoObtenido).toBe(resultadoEsperado);
 });
 
-test("crearSuperUsuario devuelve valores deseados", () => {
+test('crearSuperUsuario devuelve valores deseados', () => {
   // Arrange
-  const usuarioEsperado = { id: 1, nombre: "Mendo" };
+  const usuarioEsperado = { id: 1, nombre: 'Mendo' };
 
   // Act
   const usuarioObtenido = crearSuperUsuario();
@@ -25,9 +25,9 @@ test("crearSuperUsuario devuelve valores deseados", () => {
   expect(usuarioObtenido).toEqual(usuarioEsperado);
 });
 
-test("crearSuperUsuario devuelve [solo] valores deseados", () => {
+test('crearSuperUsuario devuelve [solo] valores deseados', () => {
   // Arrange
-  const usuarioEsperado = { id: 1, nombre: "Mendo" };
+  const usuarioEsperado = { id: 1, nombre: 'Mendo' };
 
   // Act
   const usuarioObtenido = crearSuperUsuario();
@@ -36,7 +36,7 @@ test("crearSuperUsuario devuelve [solo] valores deseados", () => {
   expect(usuarioObtenido).toStrictEqual(usuarioEsperado);
 });
 
-test("crearSuperUsuario contiene atributo { id: 1 }", () => {
+test('crearSuperUsuario contiene atributo { id: 1 }', () => {
   // Arrange
   const atributosEsperados = { id: 1 };
 
@@ -47,7 +47,7 @@ test("crearSuperUsuario contiene atributo { id: 1 }", () => {
   expect(usuarioObtenido).toMatchObject(atributosEsperados);
 });
 
-test("crearSuperUsuario contiene un atributo id numerico", () => {
+test('crearSuperUsuario contiene un atributo id numerico', () => {
   // Arrange
   const atributosEsperados = { id: expect.any(Number) };
 
@@ -58,7 +58,7 @@ test("crearSuperUsuario contiene un atributo id numerico", () => {
   expect(usuarioObtenido).toMatchObject(atributosEsperados);
 });
 
-test("crearSuperUsuario no devuelve un apellido", () => {
+test('crearSuperUsuario no devuelve un apellido', () => {
   // Arrange
   let usuarioObtenido = crearSuperUsuario();
 
@@ -75,10 +75,10 @@ test('El superusuario contiene "end"', () => {
   const usuarioObtenido = crearSuperUsuario();
 
   // Assert
-  expect(usuarioObtenido.nombre).toContain("end");
+  expect(usuarioObtenido.nombre).toContain('end');
 });
 
-test("Un array contiene 3", () => {
+test('Un array contiene 3', () => {
   // Arrange
   const miArray = [1, 2, 3, 4, 5];
 
@@ -87,7 +87,7 @@ test("Un array contiene 3", () => {
 });
 
 const calcularPi = () => Math.PI;
-test("aproximandonos a PI", () => {
+test('aproximandonos a PI', () => {
   // Arrange
   let pi;
 
@@ -98,7 +98,7 @@ test("aproximandonos a PI", () => {
   expect(pi).toBeCloseTo(3.14, 2);
 });
 
-test("Todos los valores de un array son mayores a 5", () => {
+test('Todos los valores de un array son mayores a 5', () => {
   // Arrange
   const array = [6, 7, 8, 9, 100, 20];
 

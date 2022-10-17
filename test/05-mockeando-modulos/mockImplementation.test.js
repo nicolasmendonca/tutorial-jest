@@ -1,18 +1,18 @@
-const log = (...args) => {
-  const ACTIVAR = true;
+function log(...args) {
+  const DISPLAY_LOG = false;
 
-  if (!ACTIVAR) return;
+  if (!DISPLAY_LOG) return;
   console.log(...args);
-};
+}
 
-test("mockImplementation", () => {
+test('mockImplementation', () => {
   console.clear();
   const myMock = jest
-    .fn(() => log("callback declaration"))
-    .mockImplementationOnce(() => log("mockImplementationOnce 1"))
-    .mockImplementationOnce(() => log("mockImplementationOnce 2"))
-    .mockImplementation(() => log("mockImplementation 1"))
-    .mockImplementation(() => log("mockImplementation 2"));
+    .fn(() => log('callback declaration'))
+    .mockImplementationOnce(() => log('mockImplementationOnce 1'))
+    .mockImplementationOnce(() => log('mockImplementationOnce 2'))
+    .mockImplementation(() => log('mockImplementation 1'))
+    .mockImplementation(() => log('mockImplementation 2'));
 
   Array(5)
     .fill(null)

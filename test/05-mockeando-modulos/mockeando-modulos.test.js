@@ -13,24 +13,24 @@
 // // The return value of the first call to the function was 42
 // expect(mockCallback.mock.results[0].value).toBe(42);
 
-import axios from "axios";
-import { pokemonesAxiosService } from "src/servicios/pokemonesAxiosService";
+import axios from 'axios';
+import { pokemonesAxiosService } from '../../src/servicios/pokemonesAxiosService';
 
 async function getPokemonesCount() {
   const pokemonList = await pokemonesAxiosService();
   return pokemonList.length;
 }
 
-jest.mock("axios");
+jest.mock('axios');
 
-test("getPokemonesCount devuelve la cuenta de pokemones", async () => {
+test('getPokemonesCount devuelve la cuenta de pokemones', async () => {
   // Arrange
-  const pokemonListMock = ["Ditto", "Pikachu", "Magikarp"];
-  axios.get.mockResolvedValue(pokemonListMock);
+  const pokemonListMock = ['Ditto', 'Pikachu', 'Magikarp'];
+  axios.get.mockResolvedValue({ data: pokemonListMock });
 
   // Act
   const pokemonesCount = await getPokemonesCount();
 
   // Assert
-  expect(pokemonesCount).toStrictEqual(pokemonListMock);
+  expect(pokemonesCount).toBe(pokemonListMock.length);
 });

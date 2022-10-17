@@ -2,7 +2,7 @@ const calculadora = (numero1, numero2, operacion) => {
   return operacion(numero1, numero2);
 };
 
-test.only("matchersParaMocks", () => {
+test('matchersParaMocks', () => {
   // Arrange
   const numero1 = 101;
   const numero2 = 102;

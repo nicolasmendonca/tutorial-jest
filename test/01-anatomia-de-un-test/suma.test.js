@@ -1,6 +1,6 @@
-import { suma } from "src/suma";
+import { suma } from '../../src/suma';
 
-test("suma devuelve el resultado de una suma de dos valores", () => {
+test('suma devuelve el resultado de una suma de dos valores', () => {
   // Arrange
   const sumando1 = 1;
   const sumando2 = 2;

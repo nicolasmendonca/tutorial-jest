@@ -1,22 +1,29 @@
 // Credit goes to https://jestjs.io/docs/setup-teardown
 
-// describe("group 1", () => {
-//   beforeAll(() => console.log("1 - beforeAll"));
-//   afterAll(() => console.log("1 - afterAll"));
-//   beforeEach(() => console.log("1 - beforeEach"));
-//   afterEach(() => console.log("1 - afterEach"));
+function log(...args) {
+  const DISPLAY_LOG = false;
 
-//   test("", () => console.log("1 - test"));
+  if (!DISPLAY_LOG) return;
+  console.log(...args);
+}
 
-//   describe("Scoped / Nested block", () => {
-//     beforeAll(() => console.log("2 - beforeAll"));
-//     afterAll(() => console.log("2 - afterAll"));
-//     beforeEach(() => console.log("2 - beforeEach"));
-//     afterEach(() => console.log("2 - afterEach"));
+describe('group 1', () => {
+  beforeAll(() => log('1 - beforeAll'));
+  afterAll(() => log('1 - afterAll'));
+  beforeEach(() => log('1 - beforeEach'));
+  afterEach(() => log('1 - afterEach'));
 
-//     test("", () => console.log("2 - test"));
-//   });
-// });
+  test('', () => log('1 - test'));
+
+  describe('Scoped / Nested block', () => {
+    beforeAll(() => log('2 - beforeAll'));
+    afterAll(() => log('2 - afterAll'));
+    beforeEach(() => log('2 - beforeEach'));
+    afterEach(() => log('2 - afterEach'));
+
+    test('', () => log('2 - test'));
+  });
+});
 
 // 1 - beforeAll
 // 1 - beforeEach
