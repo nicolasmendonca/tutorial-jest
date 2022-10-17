@@ -5,7 +5,7 @@
   "main": "index.html",
   "scripts": {
     "test": "jest",
-    "start": "npm run test -- --watch"
+    "start": "npm run test -- --watchAll"
   },
   "dependencies": {
     "axios": "1.1.3"
