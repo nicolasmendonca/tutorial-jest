@@ -5,7 +5,7 @@
   "main": "index.html",
   "scripts": {
     "test": "jest",
-    "test:watch": "jest ./test/* -- --watch"
+    "test:watch": "jest --watch ./test/*"
   },
   "dependencies": {
     "axios": "1.1.3"
