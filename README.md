@@ -10,7 +10,7 @@ Repositorio de ejemplo para el tutorial de Jest.
 
 ## 01. Documentación oficial de Jest
 
-[![](./images/jest-docs.png)](https://jestjs.io/docs)
+[![](./images/jest-docs.png)](https://jestjs.io/docs/getting-started)
 
 ## 02. Jest Cheatsheets En Devhints
 
