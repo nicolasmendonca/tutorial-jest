@@ -10,12 +10,12 @@ Repositorio de ejemplo para el tutorial de Jest.
 
 ## 01. Documentación oficial de Jest
 
-![[Documentacion oficial jest](https://jestjs.io/docs)](./images/jest-docs.png)
+[![](./images/jest-docs.png)](https://jestjs.io/docs)
 
 ## 02. Jest Cheatsheets En Devhints
 
-[![Jest Cheatsheets En Devhints](./images/jest-cheatsheet-devhints.png)](https://devhints.io/jest)
+[![](./images/jest-cheatsheet-devhints.png)](https://devhints.io/jest)
 
 ## 03. Jest Cheatsheet de [sapegin](https://github.com/sapegin)
 
-[![Jest Cheatsheet de sapegin](./images/jest-cheatsheet-sapegin.png)](https://github.com/sapegin/jest-cheat-sheet)
+[![](./images/jest-cheatsheet-sapegin.png)](https://github.com/sapegin/jest-cheat-sheet)
